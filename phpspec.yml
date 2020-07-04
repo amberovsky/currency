@@ -1,0 +1,6 @@
+suites:
+    currency_suite:
+        namespace: Amberovsky\Money\Currency
+        psr4_prefix: Amberovsky\Money\Currency
+        spec_path: '%paths.config%/tests'
+        src: ./src
