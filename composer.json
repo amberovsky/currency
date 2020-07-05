@@ -2,7 +2,9 @@
     "name": "amberovsky/currency",
     "type": "project",
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "ext-json": "*",
+        "psr/simple-cache": "^1.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
