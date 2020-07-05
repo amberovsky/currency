@@ -13,7 +13,7 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Psr\SimpleCache\CacheInterface;
 
-class FactorySpec extends ObjectBehavior {
+class CurrencyFactorySpec extends ObjectBehavior {
     public function let(ISO4217 $ISO4217, CacheInterface $cache) {
         $this->beConstructedWith($ISO4217, $cache);
     }

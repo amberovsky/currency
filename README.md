@@ -9,7 +9,7 @@ Please provision `Currency\Factory` with any PSR-16 implementation (for example,
 ```php
 use Amberovsky\Money\Currency;
 
-$factory = new Factory(new ISO4217(), new PSR16Cache());
+$factory = new CurrencyFactory(new ISO4217(), new PSR16Cache());
 
 $usd = $factory->fromNumericCode(ISO4217::NUMERIC_USD);
 
