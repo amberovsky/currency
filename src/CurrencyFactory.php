@@ -11,7 +11,7 @@ use Amberovsky\Money\Currency\Exception\UnknownAlphaCodeCurrencyException;
 use Amberovsky\Money\Currency\Exception\UnknownNumericCodeCurrencyException;
 use Psr\SimpleCache\CacheInterface;
 
-class Factory {
+class CurrencyFactory {
     private ISO4217 $ISO4217;
     private CacheInterface $cache;
 
