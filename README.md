@@ -41,4 +41,4 @@ make phpspec
 ```
 
 ### License
-Copyright (C) 2020 Anton Zagorskii, BSD-3 Clause license, See [license file](/LICENSE.txt) for details
+Copyright (C) 2020 Anton Zagorskii, BSD-3-Clause license, See [license file](/LICENSE.txt) for details

@@ -1,6 +1,14 @@
 {
     "name": "amberovsky/currency",
-    "type": "project",
+    "type": "library",
+    "description": "ISO-4217 Currency implementation",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Anton Zagorskii",
+            "email": "amberovsky@gmail.com"
+        }
+    ],
     "require": {
         "php": "^7.4",
         "ext-json": "*",
