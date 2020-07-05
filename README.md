@@ -30,6 +30,10 @@ ISO4217::toNumericCode(string $alphaCode): int
 ISO4217::toAlphaCode(int $numericCode): string
 ```
 
+### Integration with Doctrine
+
+Please use [amberovsky/currency-doctrine](https://github.com/amberovsky/currency-doctrine) if you need doctrine integration. It provides doctrine mapping type for `Currency`
+
 ### How to contribute
 
 Please fork this repo and create a PR. Make sure you run tests before submitting  yout PR:
