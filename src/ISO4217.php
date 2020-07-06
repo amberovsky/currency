@@ -1399,6 +1399,7 @@ class ISO4217 {
             self::KEY_DESCRIPTION   => "Pound Sterling",
             self::KEY_MINOR_UNITS   => 2,
             self::KEY_ALPHA_CODE    => self::ALPHA_GBP,
+            self::KEY_SYMBOL        => '£',
         ],
         self::NUMERIC_TZS   => [
             self::KEY_DESCRIPTION   => "Tanzanian Shilling",
@@ -1655,6 +1656,7 @@ class ISO4217 {
             self::KEY_DESCRIPTION   => "Euro",
             self::KEY_MINOR_UNITS   => 2,
             self::KEY_ALPHA_CODE    => self::ALPHA_EUR,
+            self::KEY_SYMBOL        => '€',
         ],
         self::NUMERIC_MXV   => [
             self::KEY_DESCRIPTION   => "Mexican Unidad de Inversion (UDI)",
