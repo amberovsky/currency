@@ -6,8 +6,29 @@ A simple [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) comprehensive Curren
 
 Please provision `Currency\Factory` with any PSR-16 implementation (for example, [Symfony cache](https://symfony.com/doc/current/components/cache.html))
 
+#### Symfony
+
+Add this to the `config\services.yaml`:
+
+```yaml
+    # Adapter from Symfony PSR-16 to PSR-6
+    amberovsky.money.currency.currencyFactory.cacheAdapter:
+        class: Symfony\Component\Cache\Psr16Cache
+        arguments:
+            - '@cache.app'
+
+    Amberovsky\Money\Currency\ISO4217:
+    Amberovsky\Money\Currency\CurrencyFactory:
+        public: true
+        arguments:
+            $ISO4217: '@Amberovsky\Money\Currency\ISO4217'
+            $cache: '@amberovsky.money.currency.currencyFactory.cacheAdapter'
+```
+
+#### Examples
 ```php
-use Amberovsky\Money\Currency;
+use Amberovsky\Money\Currency\CurrencyFactory;
+use Amberovsky\Money\Currency\ISO4217;
 
 $factory = new CurrencyFactory(new ISO4217(), new PSR16Cache());
 
