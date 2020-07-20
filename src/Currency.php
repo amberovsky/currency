@@ -91,9 +91,9 @@ class Currency implements Serializable {
      * @inheritDoc
      */
     public function unserialize($serialized): void {
-        /** @var mixed[] $data */
-        $data = @json_decode((string) $serialized);
-        if (json_last_error() != JSON_ERROR_NONE) {
+        /** @var mixed|array{0: int, 1: int, 2: int, 3: ISO4217::ALPHA_*, 4: string} $data */
+        $data = @json_decode((string) $serialized, true);
+        if ((json_last_error() != JSON_ERROR_NONE) || !is_array($data)) {
             throw new RuntimeException("Can not unserialize Currency, json error code: " . json_last_error());
         }
 

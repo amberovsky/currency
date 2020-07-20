@@ -63,7 +63,7 @@ class ISO4217 {
     /**
      * @param int $numericCode
      *
-     * @return mixed[] additional currency data
+     * @return array{0: string, 1: int, 2: self::ALPHA_*, 3?: string} additional currency data
      *
      * @throws UnknownNumericCodeCurrencyException
      */
@@ -442,7 +442,7 @@ class ISO4217 {
         ALPHA_USN = "USN", // US Dollar (Next day)
         ALPHA_XXX = "XXX"; // The codes assigned for transactions where no currency is involved
 
-    /** @var int[]  */
+    /** @var array<string, int>  */
     static private array $toNumericCodeMap = [
         self::ALPHA_ALL => self::NUMERIC_ALL, // (8) Lek
         self::ALPHA_DZD => self::NUMERIC_DZD, // (12) Algerian Dinar
@@ -625,7 +625,7 @@ class ISO4217 {
         self::ALPHA_XXX => self::NUMERIC_XXX, // (999) The codes assigned for transactions where no currency is involved
     ];
 
-    /** @var string[]  */
+    /** @var array<int, string>  */
     static private array $toAlphaCodeMap = [
         self::NUMERIC_ALL   => self::ALPHA_ALL, // (8) Lek
         self::NUMERIC_DZD   => self::ALPHA_DZD, // (12) Algerian Dinar
@@ -808,7 +808,7 @@ class ISO4217 {
         self::NUMERIC_XXX   => self::ALPHA_XXX, // (999) The codes assigned for transactions where no currency is involved
     ];
 
-    /** @var array[]  */
+    /** @var array<int, array{0: string, 1: int, 2: self::ALPHA_*, 3?: string}>  */
     private static array $currencies = [
         self::NUMERIC_ALL   => [
             self::KEY_DESCRIPTION   => "Lek",
